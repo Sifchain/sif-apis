@@ -27,6 +27,11 @@ Rename the ```.env-example ```file to ```.env ```.  Add to it the credentials to
 mv .env-example .env
 ```
 
+Install the required packages:
+```
+npm install
+```
+
 Start the server:
 
 ```
