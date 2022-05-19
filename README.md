@@ -38,4 +38,5 @@ Visualize the swagger on your browser by opening:
 http://localhost:8080/docs
 ```
 
-Get the knowledge from the Sifchain Gods, and have fun improving the repository by submitting pull requests
+Get the knowledge from the Sifchain Gods:crystal_ball:
+Have fun by improving the repo through pull requests:muscle:
