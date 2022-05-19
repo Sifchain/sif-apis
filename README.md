@@ -22,15 +22,15 @@ cd mimir
 ```
 
 
-Create the ```.env ``` file, and write in it the credentials to your server
+Rename the ```.env-example ```file to ```.env ```.  Add to it the credentials to your server
 ```
-nano .env
+mv .env-example .env
 ```
 
 Start the server:
 
 ```
-npm run dev```
+npm run dev
 ```
 
 Visualize the swagger on your browser by opening:
