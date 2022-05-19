@@ -42,6 +42,8 @@ Get the knowledge from the Sifchain Gods:crystal_ball:
 
 
 Have fun by improving the repo through pull requests:muscle:
+
+
 ![mimir](https://user-images.githubusercontent.com/67415638/169348880-37dbf8ca-c1c3-42c0-8cb7-56033fdd2538.jpeg)
 
 
