@@ -34,7 +34,8 @@ npm run dev```
 ```
 
 Visualize the swagger on your browser by opening:
-``` http://localhost:8080/docs
+```
+http://localhost:8080/docs
 ```
 
 Get the knowledge from the Sifchain Gods, and have fun improving the repository by submitting pull requests
