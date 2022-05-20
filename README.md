@@ -9,8 +9,7 @@ You can follow the instruction and create your own database by:
 - Populating it with the Sifchain database Vanir
 
 ### Dependencies:
-[Node v14.17.4]([url]https://nodejs.org/en/blog/release/v14.17.4)
-[Link text Here](https://link-url-here.org)
+[Node v14.17.4](https://nodejs.org/en/blog/release/v14.17.4)
 
 
 ### How to use it:
