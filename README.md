@@ -9,23 +9,15 @@ You can follow the instruction and create your own database by:
 - Populating it with the Sifchain database Vanir
 
 ### Dependencies:
-[node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4))
+[Node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4))
 
-You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by:
-
-Install curl:
+You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by running the following commands:
 
  ```sudo apt install curl  ```
- 
-Run the nvm installer script.:
 
  ```curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  ```
- 
-Apply the file changes to the current shell:
 
  ```source ~/.profile  ```
- 
-Install node:
 
  ```nvm install 14.17.4```
  
