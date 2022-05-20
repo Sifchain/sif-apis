@@ -28,6 +28,17 @@ Rename the ```.env-example ```file to ```.env ```.  Add to it the credentials to
 ```
 mv .env-example .env
 ```
+Open the newly created .env file, and add the credentials to your database
+```
+nano .env
+```
+Open the openapi.yaml file and in the servers sections, add the url to the public IP address of your server. 
+You can add it next to the already present  ```http://localhost:8080``` url
+
+```
+nano mimir/api/openapi.yaml
+```
+
 
 Install the required packages:
 ```
