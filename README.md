@@ -56,10 +56,10 @@ Visualize the swagger on your browser by opening:
 http://localhost:8080/docs
 ```
 
-or select the host you want in the Swagger UI.
+or select the host you want in the Swagger UI. If you have issues, make sure the port 8080 is accessible
 
-If you have issues, make sure the port 8080 is accessible
 
+-----That's it! :D----
 Get the knowledge from the Sifchain Gods:crystal_ball:
 
 
