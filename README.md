@@ -50,11 +50,18 @@ Start the server:
 ```
 npm run dev
 ```
+Select the host you want:
+<img width="424" alt="Screenshot 2022-05-20 at 22 14 53" src="https://user-images.githubusercontent.com/67415638/169604185-b1273c03-3fca-45ed-95fe-325652abcc7a.png">
+
 
 Visualize the swagger on your browser by opening:
 ```
 http://localhost:8080/docs
 ```
+
+or by opening the public the <public_IP_of_your_server>:8080/docs
+
+If you have issues, make sure the port 8080 is accessible
 
 Get the knowledge from the Sifchain Gods:crystal_ball:
 
