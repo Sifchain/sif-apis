@@ -9,7 +9,7 @@ You can follow the instruction and create your own database by:
 - Populating it with the Sifchain database Vanir
 
 ### Dependencies:
-[node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4/))
+[node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4))
 
 You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by:
 
