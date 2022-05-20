@@ -13,16 +13,20 @@ You can follow the instruction and create your own database by:
 
 You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by:
 
-installing curl:
+Install curl:
+
  ```sudo apt install curl  ```
  
 Run the nvm installer script.:
+
  ```curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  ```
  
 Apply the file changes to the current shell:
+
  ```source ~/.profile  ```
  
 Install node:
+
  ```nvm install 14.17.4```
  
 ### How to use it:
