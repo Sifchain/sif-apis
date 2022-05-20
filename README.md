@@ -8,9 +8,10 @@ You can follow the instruction and create your own database by:
 - Fetching data through setting up your own ETL processes 
 - Populating it with the Sifchain database Vanir
 
-###Dependencies:
+### Dependencies:
 [node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4/))
 You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by running:
+
  ```nvm install 14.17.4```
 ### How to use it:
 
