@@ -10,8 +10,14 @@ You can follow the instruction and create your own database by:
 
 ### Dependencies:
 [node v14.17.4]([url](https://nodejs.org/en/blog/release/v14.17.4/))
-You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by running:
-
+You can install it through [nvm]([url](https://heynode.com/tutorial/install-nodejs-locally-nvm/)) by:
+installing curl
+ ```sudo apt install curl  ```
+Run the nvm installer script.:
+ ```curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  ```
+Apply the file changes to the current shell:
+ ```source ~/.profile  ```
+Install node:
  ```nvm install 14.17.4```
 ### How to use it:
 
