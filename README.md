@@ -1,7 +1,7 @@
 # Mimir
 
 ## Overview
-Mimir is the god in Norse mythology famous for his knowledge and wisdom. His enlightened advices are valuable to obtain guidance and direction.🧙‍♂️
+In Norse mythology, Mimir is the entity famous for his knowledge and wisdom. His enlightened advices are valuable to obtain guidance and direction.🧙‍♂️
 
 In this repository, you can find all the data endpoints available for the Sifchain DEX. 
 You can follow the instruction and create your own database by:
