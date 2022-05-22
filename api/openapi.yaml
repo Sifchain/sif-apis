@@ -52,7 +52,7 @@ paths:
           type: string
       responses:
         "200":
-          description: Display individual Pool info
+          description: Displa individual Pool info
           content:
             application/json:
               schema:
@@ -283,47 +283,7 @@ paths:
 #                 items:
 #                   $ref: '#/components/schemas/getPeggedAssetsResponse'
 #       x-swagger-router-controller: Peggy
-  /asset:
-    get:
-      tags:
-      - Assets
-      summary: Get details on available crypto currencies.
-      description: This endpoint is to provide a summary for each currency available
-        on the exchange.
-      operationId: getAssets
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getAssetsResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Assets                    
-  /asset/{symbol}:
-    get:
-      tags:
-      - Assets
-      operationId: getTokenValue
-      parameters:
-      - name: symbol
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: This endpoint gets USD value of token.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetTokenValueResponse'
-      x-swagger-router-controller: Assets
-  /asset/totalSupply:
+ /asset/totalSupply:
     get:
       tags:
       - Stats
@@ -392,21 +352,6 @@ paths:
                 $ref: '#/components/schemas/getCirculatingSupplyResponse'
       x-swagger-router-controller: Assets      
 
-  /asset/tokenStatsPMTP:
-    get:
-      tags:
-      - Assets
-      description: This end point gets the statistics of tokens 
-      operationId: getTokenStatsPMTP
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getCirculatingSupplyResponse'
-      x-swagger-router-controller: Assets      
-
 
   /network:
     get:
@@ -422,81 +367,7 @@ paths:
                 $ref: '#/components/schemas/getNetworkResponse'
       x-swagger-router-controller: Network    
 
-  /network/dispensation/{type}:
-    get:
-      tags:
-      - Network
-      operationId: getDispensation
-      parameters:
-      - name: type 
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Dispensation List
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getPoolResponse'
-      x-swagger-router-controller: Network
-
-  /network/rewardConfig/{type}:
-    get:
-      tags:
-      - Network
-      operationId: getRewardConfig
-      parameters:
-      - name: type 
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Reward Configuration Setting
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getPoolResponse'
-      x-swagger-router-controller: Network
-
-
-  /network/{symbol}/netChange/{lpAddress}:
-    get:
-      tags:
-      - Network
-      operationId: getNetChange
-      parameters:
-      - name: symbol
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: lpAddress
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Displays net gain or loss for a liquidity provider with specified address and token symbol
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getLiquidityProviderResponse'
-      x-swagger-router-controller: Network
-
-  /dailyPrice:
+ /dailyPrice:
     get:
       tags:
       - Network
@@ -619,155 +490,6 @@ paths:
                   $ref: '#/components/schemas/getTradeResponse'
                 x-content-type: application/json
       x-swagger-router-controller: Trades
-
-  /trade/{token}/tx_vol/{type}:
-    get:
-      tags:
-      - Trades
-      summary: Get the ranks of trading competition
-      description: This endpoint returns result based on volume or txns
-      operationId: getCompetitionRanksByToken
-      parameters:
-      - name: token
-        in: path
-        description: token
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: type
-        in: path
-        description: Competition type.  Either vol or tx.
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getTradeResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Trades
-
-  /trade/tx_vol/{type}:
-    get:
-      tags:
-      - Trades
-      summary: Get the ranks of trading competition
-      description: This endpoint returns result based on volume or txns
-      operationId: getCompetitionRanks
-      parameters:
-      - name: type
-        in: path
-        description: Competition type.  Either vol or tx.
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getTradeResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Trades
-
-  /network/availableAmount/{address}:
-    get:
-      tags:
-      - Network
-      summary: Get the available amount
-      description: This endpoint returns reward based liquidity events
-      operationId: getAvailableAmount
-      parameters:
-      - name: address
-        in: path
-        description: Wallet address
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Reward Payout Amount
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getPoolResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Network
-
-  /network/lucaVibe/{address}:
-    get:
-      tags:
-      - Network
-      summary: Get the Luca Vibe
-      description: Whatever this means
-      operationId: getLucaVibe
-      parameters:
-      - name: address
-        in: path
-        description: Wallet address
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Reward Payout Amount
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getPoolResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Network
-
-
-  /network/rewardUser/{address}:
-    get:
-      tags:
-      - Network
-      summary: Get the reward payout info
-      description: This endpoint returns reward based liquidity events
-      operationId: getRewardUser
-      parameters:
-      - name: address
-        in: path
-        description: Wallet address
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Reward Payout Amount
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/getPoolResponse'
-                x-content-type: application/json
-      x-swagger-router-controller: Network
 
 components:
   schemas:
