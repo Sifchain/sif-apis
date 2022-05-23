@@ -283,7 +283,7 @@ paths:
 #                 items:
 #                   $ref: '#/components/schemas/getPeggedAssetsResponse'
 #       x-swagger-router-controller: Peggy
- /asset/totalSupply:
+  /asset/totalSupply:
     get:
       tags:
       - Stats
@@ -367,7 +367,7 @@ paths:
                 $ref: '#/components/schemas/getNetworkResponse'
       x-swagger-router-controller: Network    
 
- /dailyPrice:
+  /dailyPrice:
     get:
       tags:
       - Network
