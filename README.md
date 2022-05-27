@@ -70,6 +70,7 @@ Get the data from the sif-apis :crystal_ball:
 
 Have fun by improving the repo through pull requests:muscle:
 
-**Note: **
+**Note:**
+
 *If you don't set up your own DB through sif-etl, you will need access to an already existing DB. 
-If this is the case, please reach out on Discord to get access. Keep in mind that currently we are only giving access to the DB to active contributors. :) *
+If this is the case, please reach out on Discord to get access. Keep in mind that currently we are only giving access to the DB to active contributors.* :)
