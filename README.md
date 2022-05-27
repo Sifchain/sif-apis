@@ -6,7 +6,7 @@
 In this repository, you can find all the data endpoints available for the Sifchain DEX. 
 You can follow the instruction and create your own database by:
 - Fetching data through setting up your own ETL processes through [sif-etl](https://github.com/Sifchain/sif-etl)
-- Populating it with the Sifchain database (you will need to ask for credentials on [Discord]([url](https://discord.gg/ZSw72wxF)
+- Populating it with the Sifchain database (you will need to ask for credentials on ([Discord](https://discord.gg/ZSw72wxF)
 in the sdk-integrations channel
 
 :mage:	
