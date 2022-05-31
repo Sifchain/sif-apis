@@ -12,9 +12,9 @@ Write here a summary of the changes, including scope and context. List any depen
 ## How has this Been Tested?
 
 
-- [ ] Describe tests that you ran to verify your changes
-- [ ] Provide instructions so we that we can reproduce them
-- [ ] List any relevant details for your test configuration
+- Describe tests that you ran to verify your changes
+- Provide instructions so we that we can reproduce them
+- List any relevant details for your test configuration
 
 
 ## Checklist:
