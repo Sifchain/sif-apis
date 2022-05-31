@@ -21,7 +21,7 @@ Write here a summary of the changes, including scope and context. List any depen
 
 - I have written and added new tests for my changes
 - New and existing unit tests pass locally with my changes
-- Followed the Contribution Guidelines doc
+- Followed the [contribution_guidelines.md](https://github.com/Sifchain/sif-apis/blob/master/contribution_guidelines.md)
 - I have properly commented my code and updated the docs
 - My changes generate no new warnings
 
