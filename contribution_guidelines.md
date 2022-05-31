@@ -11,5 +11,5 @@
 Make sure you have a descriptive commit message with a short title
 
 ## Last but not least
-- Follow the [pull_request_template.md]([url](https://github.com/Sifchain/sif-apis/blob/master/pull_request_template.md)), and mark the tasks off your checklist by adding an x in the [ ] e.g. [x]
+- Follow the [pull_request_template.md](https://github.com/Sifchain/sif-apis/blob/master/pull_request_template.md) , and mark the checklist by adding an x in the [ ] e.g. [x]
 - Give a descriptive title to your PR.
