@@ -69,7 +69,9 @@ Get the data from the sif-apis :crystal_ball:
 
 
 Have fun by improving the repo through pull requests:muscle:
-Please follow the [Contribution Guidelines](https://github.com/Sifchain/sif-apis/blob/master/contribution_guidelines.md)
+
+
+And please follow the [Contribution Guidelines](https://github.com/Sifchain/sif-apis/blob/master/contribution_guidelines.md)
 
 **Note:**
 
