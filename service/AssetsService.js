@@ -117,7 +117,7 @@ exports.getTokenStats = async function () {
     p.external_price_usd,
     p.native_price_usd,
     coalesce (v1.swap_fees_daily,0) as swap_fees
-        from pmtp_pool_info p 
+        from pool_info p 
         inner join token_registry tr
         on p.pool = tr.denom
         left join 
@@ -294,7 +294,7 @@ exports.getTokenStatsPMTP = async function () {
     p.external_price_usd,
     p.native_price_usd,
     coalesce (v1.swap_fees_daily,0) as swap_fees
-        from pmtp_pool_info p 
+        from pool_info p 
         inner join token_registry tr
         on p.pool = tr.denom
         left join 
