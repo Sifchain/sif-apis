@@ -704,3 +704,72 @@ exports.cmcTotalDailyVolume = async function () {
     throw new ServerError()
   }
 }
+
+
+exports.getLppdReward = async function (address) {
+  try {
+    const query = `
+    select ld_recipient_addr as address, sum(ld_total_amount)/1e18 as amount
+    from events_audit
+    where type in ('lppd/distribution','rewards/distribution')
+    and ld_recipient_addr = $1
+    group by address
+    `
+    const values = [`${address}`]
+    const result = await db.query(query, values)
+
+     if (!result || !result.rows || !result.rows.length) return []
+        console.log(result)
+
+
+    const OutResult = {
+      Output: result.rows.map((data) => {
+        return {
+          address: data.address,
+          type: data.type,
+          coins: [
+            {
+              denom: 'rowan',
+              amount: data.amount,
+            },
+          ],
+        }
+      }),
+    }
+
+//    const OutResult = {
+//      Output: {
+//        recipient: 'sifaddress123testtesttest',
+//        received: [
+//          {
+//            poolDenom: 'rowan',
+//            totalLPDistributionReceivedInRowan: 2938322, //data.amount,
+//            totalRewardsReceivedInRowan: 3823838, //data.amount / 10,
+//          },
+//        ],
+//      },
+//    }
+    /*result.rows.map((data) => {
+        return {
+          recipient: data.address,
+          received: [
+            {
+              poolDenom: 'rowan',
+              totalLPDistributionReceivedInRowan: 2938322, //data.amount,
+              totalRewardsReceivedInRowan: 3823838, //data.amount / 10,
+            },
+          ],
+        }
+      }),
+    }
+    */
+    return OutResult
+  } catch (error) {
+    logger.error(error)
+    if (error.response && error.response.status === 400) {
+      throw new BadRequestError(error.response.data.error)
+    }
+
+    throw new ServerError()
+  }
+}

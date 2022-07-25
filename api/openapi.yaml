@@ -365,7 +365,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/getNetworkResponse'
-      x-swagger-router-controller: Network    
+      x-swagger-router-controller: Network
+
+  /network/lppdReward/{address}:
+    get:
+      tags:
+        - Network
+      summary: Get the historical distribution of rewards and lppd
+      description: This endpoint returns reward and lpp distribution amount since beginning of time
+      operationId: getLppdReward
+      parameters:
+        - name: address
+          in: path
+          description: Wallet address
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Reward Payout Amount
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/getPoolResponse'
+                x-content-type: application/json
+      x-swagger-router-controller: Network
 
   /dailyPrice:
     get:

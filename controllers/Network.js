@@ -124,3 +124,13 @@ module.exports.getRewardUser = function getRewardUser(req, res, next, address) {
     }
   
     
+
+module.exports.getLppdReward = function getLppdReward(req, res, next, address) {
+  Network.getLppdReward(address)
+    .then(function (response) {
+      utils.writeJson(res, response)
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response)
+    })
+}
