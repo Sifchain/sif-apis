@@ -69,7 +69,8 @@ exports.getCirculatingSupply = async function () {
     const genesisAccountAmount = genesisAccountRes.data.result.find((coin) => coin.denom === 'rowan').amount
 
     const circulatingSupply =
-      BigInt(totalRowanSupply.amount) - (totalGirlValidatorBalances + BigInt(genesisAccountAmount))
+      BigInt(totalRowanSupply.amount) - (totalGirlValidatorBalances + BigInt(newGenesisAccountAmount) +
+      BigInt(genesisAccountAmount) + BigInt(genesisAccountAmount))
 
     return { amount: circulatingSupply.toString(), denom: 'rowan' }
   } catch (error) {
