@@ -63,14 +63,39 @@ exports.getCirculatingSupply = async function () {
       .map((girl) => BigInt(girl.balance))
       .reduce((sum, current) => sum + current)
 
-    const genesisAccountRes = await axios({
-      url: `${config.lcd.url}/bank/balances/${config.genesisAccount}`,
-    })
-    const genesisAccountAmount = genesisAccountRes.data.result.find((coin) => coin.denom === 'rowan').amount
+    const genesisAccountRes = await axios({ 
+        url: `${config.lcd.url}/bank/balances/${config.genesisAccount}`,  
+      })  
+    const newGenesisAccountRes = await axios({  
+        url: `${config.lcd.url}/bank/balances/${config.genesisAccountNew}`, 
+      })  
+    const newNewGenesisAccountRes = await axios({ 
+        url: `${config.lcd.url}/bank/balances/${config.genesisAccountNewNew}`,  
+      })      
+    var genesisAccountAmount = 0
+    var newGenesisAccountAmount = 0
+    var newNewGenesisAccountAmount = 0
+      
+    try { 
+      genesisAccountAmount = genesisAccountRes.data.result.find((coin) => coin.denom === 'rowan').amount  
+    } catch (error) { 
+      genesisAccountAmount = 0  
+    } 
+    try { 
+      newGenesisAccountAmount = newGenesisAccountRes.data.result.find((coin) => coin.denom === 'rowan').amount  
+    } catch (err) { 
+      newGenesisAccountAmount = 0 
+    } 
+    try { 
+      newNewGenesisAccountAmount = newNewGenesisAccountRes.data.result.find((coin) => coin.denom === 'rowan').amount  
+    } catch (err) { 
+      newNewGenesisAccountAmount = 0  
+    } 
 
     const circulatingSupply =
-      BigInt(totalRowanSupply.amount) - (totalGirlValidatorBalances + BigInt(newGenesisAccountAmount) +
+      BigInt(totalRowanSupply.amount) - (totalGirlValidatorBalances +BigInt(newGenesisAccountAmount) +
       BigInt(genesisAccountAmount) + BigInt(genesisAccountAmount))
+    
 
     return { amount: circulatingSupply.toString(), denom: 'rowan' }
   } catch (error) {
@@ -102,3 +127,4 @@ exports.getStakingRewards = async function () {
     throw new ServerError()
   }
 }
+

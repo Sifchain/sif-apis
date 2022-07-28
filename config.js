@@ -38,9 +38,12 @@ const config = {
     { name: 'sophie', validatorAddress: 'sifvaloper1gaej9rvg99xnn8zecznj2vf2tnf87gx6x49ujd' },
     { name: 'ambre', validatorAddress: 'sifvaloper1kxyjwd9clrnntuxdrtejwdrgvatarftzg99dpq' },
   ],
-  genesisAccount: 'sif1ct2s3t8u2kffjpaekhtngzv6yc4vm97xajqyl3',
   testAmountRowan: '70558842600761131819410639',
   bridgeBankAddress: 'sif1l3dftf499u4gvdeuuzdl2pgv4f0xdtnuuwlzp8',
+  genesisAccountNew: 'sif1zyz5r5v0fzye6sv2n3m4l5gnm3szfzmfxmtp4u',
+  genesisAccount: 'sif1ct2s3t8u2kffjpaekhtngzv6yc4vm97xajqyl3',
+  genesisAccountNewNew: 'sif16vsc4m2pwys7rwmu9yg8u229dpl4vh7trmlulk',
 }
+
 
 module.exports = config
