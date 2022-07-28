@@ -94,7 +94,8 @@ exports.getCirculatingSupply = async function () {
 
     const circulatingSupply =
       BigInt(totalRowanSupply.amount) - (totalGirlValidatorBalances +BigInt(newGenesisAccountAmount) +
-      BigInt(genesisAccountAmount) + BigInt(genesisAccountAmount))
+      BigInt(genesisAccountAmount))
+
     
 
     return { amount: circulatingSupply.toString(), denom: 'rowan' }
